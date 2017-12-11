@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("D:/Selenium Latest Framework - 1/CucumberPractiseProject/src/main/java/Features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("C:/Users/hiteshg/git/CucumberPractise/CucumberPractiseProject/src/main/java/Features/Login.feature");
 formatter.feature({
   "comments": [
     {
@@ -100,7 +100,7 @@ formatter.step({
 });
 formatter.step({
   "line": 25,
-  "name": "User Enter Username and Password",
+  "name": "User Enter \"hitesh.ghai\" and \"Pyramid123!\"",
   "keyword": "Then "
 });
 formatter.step({
@@ -122,42 +122,52 @@ formatter.match({
   "location": "LoginStepDefinition.user_already_On_login_page()"
 });
 formatter.result({
-  "duration": 17068825568,
+  "duration": 59507154829,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.title_of_login_page_is_pyd()"
 });
 formatter.result({
-  "duration": 53477920,
+  "duration": 26931440,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginStepDefinition.user_Enter_Username_and_Password()"
+  "arguments": [
+    {
+      "val": "hitesh.ghai",
+      "offset": 12
+    },
+    {
+      "val": "Pyramid123!",
+      "offset": 30
+    }
+  ],
+  "location": "LoginStepDefinition.user_Enter_Username_and_Password(String,String)"
 });
 formatter.result({
-  "duration": 518859707,
+  "duration": 956906897,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_clicks_on_Login_button()"
 });
 formatter.result({
-  "duration": 19881888375,
+  "duration": 6022099144,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_is_on_Home_Page()"
 });
 formatter.result({
-  "duration": 97432283,
+  "duration": 188046577,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.close_browser()"
 });
 formatter.result({
-  "duration": 796322304,
+  "duration": 913436183,
   "status": "passed"
 });
 });

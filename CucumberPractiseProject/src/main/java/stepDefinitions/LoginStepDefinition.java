@@ -39,8 +39,8 @@ public class LoginStepDefinition {
 	@Then("^User Enter \"(.*)\" and \"(.*)\"$")
 	public void user_Enter_Username_and_Password(String userName, String passWord)  {
 	    // Write code here that turns the phrase above into concrete actions
-	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys("hitesh.ghai");
-	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys("Pyramid123!");
+	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys(userName);
+	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys(passWord);
 	}
 
 	@Then("^User clicks on Login button$")

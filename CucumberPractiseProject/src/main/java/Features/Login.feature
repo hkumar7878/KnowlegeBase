@@ -22,7 +22,7 @@ Feature: Application Login Feature
   Scenario: Application Login Test Scenario
     Given User is already on Login Page
     When Title of Login page is Pyd
-   	Then User Enter "hitesh.ghai" and Pyramid123!
+   	Then User Enter "hitesh.ghai" and "Pyramid123!"
     Then User clicks on Login button
     And User is on Home Page
    	Then close the browser
