@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="38.416806">
+<testcase classname="Application Login Feature" name="Application Login Test Scenario" time="38.416806">
+<system-out><![CDATA[Given User is already on Login Page.........................................passed
+When Title of Login page is Pyd.............................................passed
+Then User Enter Username and Password.......................................passed
+Then User clicks on Login button............................................passed
+And User is on Home Page....................................................passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
