@@ -1,83 +1,9 @@
 [
   {
-    "comments": [
-      {
-        "line": 1,
-        "value": "#Author: your.email@your.domain.com"
-      },
-      {
-        "line": 2,
-        "value": "#Keywords Summary :"
-      },
-      {
-        "line": 3,
-        "value": "#Feature: List of scenarios."
-      },
-      {
-        "line": 4,
-        "value": "#Scenario: Business rule through list of steps with arguments."
-      },
-      {
-        "line": 5,
-        "value": "#Given: Some precondition step"
-      },
-      {
-        "line": 6,
-        "value": "#When: Some key actions"
-      },
-      {
-        "line": 7,
-        "value": "#Then: To observe outcomes or validation"
-      },
-      {
-        "line": 8,
-        "value": "#And,But: To enumerate more Given,When,Then steps"
-      },
-      {
-        "line": 9,
-        "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
-      },
-      {
-        "line": 10,
-        "value": "#Examples: Container for s table"
-      },
-      {
-        "line": 11,
-        "value": "#Background: List of steps run before each of the scenarios"
-      },
-      {
-        "line": 12,
-        "value": "#\"\"\" (Doc Strings)"
-      },
-      {
-        "line": 13,
-        "value": "#| (Data Tables)"
-      },
-      {
-        "line": 14,
-        "value": "#@ (Tags/Labels):To group Scenarios"
-      },
-      {
-        "line": 15,
-        "value": "#\u003c\u003e (placeholder)"
-      },
-      {
-        "line": 16,
-        "value": "#\"\""
-      },
-      {
-        "line": 17,
-        "value": "## (Comments)"
-      },
-      {
-        "line": 18,
-        "value": "#Sample Feature Definition Template"
-      }
-    ],
-    "line": 20,
+    "line": 1,
     "elements": [
       {
-        "line": 22,
+        "line": 3,
         "name": "Application Login Test Scenario",
         "description": "",
         "id": "application-login-feature;application-login-test-scenario",
@@ -86,83 +12,80 @@
         "steps": [
           {
             "result": {
-              "duration": 59507154829,
+              "duration": 102963956211,
               "status": "passed"
             },
-            "line": 23,
+            "line": 4,
             "name": "User is already on Login Page",
             "match": {
-              "location": "LoginStepDefinition.user_already_On_login_page()"
+              "location": "LoginStepDefinitionDataTable.user_already_On_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 26931440,
+              "duration": 193498309,
               "status": "passed"
             },
-            "line": 24,
+            "line": 5,
             "name": "Title of Login page is Pyd",
             "match": {
-              "location": "LoginStepDefinition.title_of_login_page_is_pyd()"
+              "location": "LoginStepDefinitionDataTable.title_of_login_page_is_pyd()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 956906897,
-              "status": "passed"
+              "duration": 6210783005,
+              "error_message": "java.lang.IndexOutOfBoundsException: Index: 1, Size: 1\r\n\tat java.util.ArrayList.rangeCheck(Unknown Source)\r\n\tat java.util.ArrayList.get(Unknown Source)\r\n\tat java.util.Collections$UnmodifiableList.get(Unknown Source)\r\n\tat stepDefinitions.LoginStepDefinitionDataTable.user_Enter_Username_and_Password(LoginStepDefinitionDataTable.java:50)\r\n\tat ✽.Then User Enter username and password(C:/Users/hiteshg/git/CucumberPractise/CucumberPractiseProject/src/main/java/Features/LoginDataTable.feature:6)\r\n",
+              "status": "failed"
             },
-            "line": 25,
-            "name": "User Enter \"hitesh.ghai\" and \"Pyramid123!\"",
+            "line": 6,
+            "name": "User Enter username and password",
             "match": {
-              "arguments": [
-                {
-                  "val": "hitesh.ghai",
-                  "offset": 12
-                },
-                {
-                  "val": "Pyramid123!",
-                  "offset": 30
-                }
-              ],
-              "location": "LoginStepDefinition.user_Enter_Username_and_Password(String,String)"
+              "location": "LoginStepDefinitionDataTable.user_Enter_Username_and_Password(DataTable)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "hitesh.ghai",
+                  "Pyramid123!"
+                ],
+                "line": 8
+              }
+            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 6022099144,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 26,
+            "line": 10,
             "name": "User clicks on Login button",
             "match": {
-              "location": "LoginStepDefinition.user_clicks_on_Login_button()"
+              "location": "LoginStepDefinitionDataTable.user_clicks_on_Login_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 188046577,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 27,
+            "line": 11,
             "name": "User is on Home Page",
             "match": {
-              "location": "LoginStepDefinition.user_is_on_Home_Page()"
+              "location": "LoginStepDefinitionDataTable.user_is_on_Home_Page()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 913436183,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 28,
+            "line": 12,
             "name": "close the browser",
             "match": {
-              "location": "LoginStepDefinition.close_browser()"
+              "location": "LoginStepDefinitionDataTable.close_browser()"
             },
             "keyword": "Then "
           }
@@ -173,6 +96,6 @@
     "description": "",
     "id": "application-login-feature",
     "keyword": "Feature",
-    "uri": "C:/Users/hiteshg/git/CucumberPractise/CucumberPractiseProject/src/main/java/Features/Login.feature"
+    "uri": "C:/Users/hiteshg/git/CucumberPractise/CucumberPractiseProject/src/main/java/Features/LoginDataTable.feature"
   }
 ]

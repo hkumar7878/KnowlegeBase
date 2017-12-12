@@ -1,4 +1,8 @@
-/*package stepDefinitions;
+package stepDefinitions;
+
+//import java.util.List;
+
+import java.util.List;
 
 import junit.framework.Assert;
 
@@ -6,12 +10,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class LoginStepDefinition {
+public class LoginStepDefinitionDataTable {
 	
 	WebDriver driver;
 	//Step definition file
@@ -36,11 +41,13 @@ public class LoginStepDefinition {
 		Assert.assertEquals("PyramidCore-Login",title);
 	}
 	
-	@Then("^User Enter \"(.*)\" and \"(.*)\"$")
-	public void user_Enter_Username_and_Password(String userName, String passWord)  {
-	    // Write code here that turns the phrase above into concrete actions
-	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys(userName);
-	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys(passWord);
+	@Then("^User Enter username and password$")
+	public void user_Enter_Username_and_Password(DataTable credentials)  {
+		
+		List<List<String>> data=credentials.raw();
+	
+	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys(data.get(0).get(0));
+	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys(data.get(0).get(1));
 	}
 
 	@Then("^User clicks on Login button$")
@@ -73,4 +80,3 @@ public class LoginStepDefinition {
 	
 
 }
-*/

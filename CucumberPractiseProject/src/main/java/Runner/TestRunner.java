@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 	
-		features = "C://Users//hiteshg//git//CucumberPractise//CucumberPractiseProject//src//main//java//Features//Login.feature",
+		features = "C://Users//hiteshg//git//CucumberPractise//CucumberPractiseProject//src//main//java//Features//LoginDataTable.feature",
 	
 				glue={"stepDefinitions"},// the path of step definition file
 				format={"pretty","html:test-output","json:json_output/cucumber.json","junit:junit_sel/cucumber.sel"},// To generate different kind of output report
