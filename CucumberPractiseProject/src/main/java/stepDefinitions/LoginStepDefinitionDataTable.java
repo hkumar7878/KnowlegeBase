@@ -24,8 +24,8 @@ public class LoginStepDefinitionDataTable {
 	boolean flag;
 	
 	@Given("^User is already on Login Page$")
-	public void user_already_On_login_page()
-	{
+	public void user_is_already_on_Login_Page() throws Throwable {
+	
 		currentDir = System.getProperty("user.dir");
 		String chromeDriverLocation = currentDir + "/BrowsersExe/chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver",chromeDriverLocation );
@@ -34,24 +34,23 @@ public class LoginStepDefinitionDataTable {
 	}
 	
 	@When("^Title of Login page is Pyd$")
-	public void title_of_login_page_is_pyd()
-	{
+	public void title_of_Login_page_is_Pyd() throws Throwable {
 		String title=driver.getTitle();
 		System.out.println(title);
 		Assert.assertEquals("PyramidCore-Login",title);
 	}
 	
 	@Then("^User Enter username and password$")
-	public void user_Enter_Username_and_Password(DataTable credentials)  {
+	public void user_Enter_username_and_password(DataTable credentials)  {
 		
 		List<List<String>> data=credentials.raw();
 	
-	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys(data.get(0).get(0));
-	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys(data.get(0).get(1));
+	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys(data.get(1).get(0));
+	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys(data.get(1).get(1));
 	}
 
 	@Then("^User clicks on Login button$")
-	public void user_clicks_on_Login_button()  {
+	public void user_clicks_on_Login_button() throws Throwable  {
 	 
 	    driver.findElement(By.id("pydLogin_btnLogin")).click();
 	}
@@ -72,8 +71,7 @@ public class LoginStepDefinitionDataTable {
 	}
 	
 	@Then("^close the browser$")
-	
-	public void close_browser()
+	public void close_the_browser() throws Throwable 
 	{
 		driver.quit();
 	}
