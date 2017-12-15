@@ -1,4 +1,4 @@
-package stepDefinitions;
+package com.cucumber.test;
 
 //import java.util.List;
 

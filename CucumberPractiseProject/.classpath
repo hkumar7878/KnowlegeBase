@@ -35,5 +35,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/Ecommerce_Cucumber"/>
+	<classpathentry kind="lib" path="C:/Users/hiteshg/Desktop/PTE/sob jar/SeleniumObjectBank_v1.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
