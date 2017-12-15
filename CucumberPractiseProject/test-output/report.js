@@ -70,42 +70,42 @@ formatter.match({
   "location": "LoginStepDefinitionDataTable.user_is_already_on_Login_Page()"
 });
 formatter.result({
-  "duration": 70062167163,
+  "duration": 96800867980,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinitionDataTable.title_of_Login_page_is_Pyd()"
 });
 formatter.result({
-  "duration": 34790220,
+  "duration": 21359321,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinitionDataTable.user_Enter_username_and_password(DataTable)"
 });
 formatter.result({
-  "duration": 3110908327,
+  "duration": 1545623164,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinitionDataTable.user_clicks_on_Login_button()"
 });
 formatter.result({
-  "duration": 9855525626,
+  "duration": 10923734558,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinitionDataTable.user_is_on_Home_Page()"
 });
 formatter.result({
-  "duration": 158423918,
+  "duration": 80993099,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinitionDataTable.close_the_browser()"
 });
 formatter.result({
-  "duration": 845788592,
+  "duration": 10700011654,
   "status": "passed"
 });
 });

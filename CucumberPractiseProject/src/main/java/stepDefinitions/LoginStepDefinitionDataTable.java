@@ -10,27 +10,31 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Base.BaseUtil;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class LoginStepDefinitionDataTable {
+public class LoginStepDefinitionDataTable extends BaseUtil{
 	
-	WebDriver driver;
+	//WebDriver driver;
 	//Step definition file
-	String currentDir;
 	boolean flag;
+	public BaseUtil base;
+	
+	public LoginStepDefinitionDataTable()
+	{
+		super();
+	}
 	
 	@Given("^User is already on Login Page$")
 	public void user_is_already_on_Login_Page() throws Throwable {
 	
-		currentDir = System.getProperty("user.dir");
-		String chromeDriverLocation = currentDir + "/BrowsersExe/chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver",chromeDriverLocation );
-		driver= new ChromeDriver();
-		driver.get("http://pyramidcore.pyramidci.com/Security/PCILoginNew.aspx");
+		
+		driver.navigate().to("http://pyramidcore.pyramidci.com/Security/PCILoginNew.aspx");
+		
 	}
 	
 	@When("^Title of Login page is Pyd$")
@@ -43,7 +47,7 @@ public class LoginStepDefinitionDataTable {
 	@Then("^User Enter username and password$")
 	public void user_Enter_username_and_password(DataTable credentials)  {
 		
-		List<List<String>> data=credentials.raw();
+	   List<List<String>> data=credentials.raw();
 	
 	   driver.findElement(By.id("pydLogin_txtUserid")).sendKeys(data.get(1).get(0));
 	   driver.findElement(By.id("pydLogin_txtUserPwd")).sendKeys(data.get(1).get(1));
